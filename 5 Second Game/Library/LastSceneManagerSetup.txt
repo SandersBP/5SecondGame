@@ -1,8 +1,1 @@
-<<<<<<< HEAD
 sceneSetups: []
-=======
-sceneSetups:
-- path: Assets/_Scenes/_StartScreen.unity
-  isLoaded: 1
-  isActive: 1
->>>>>>> master
