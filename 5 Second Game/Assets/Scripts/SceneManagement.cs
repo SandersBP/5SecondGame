@@ -3,29 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/**  
- Author: Sanders
+/**
+ Author: Sanders, Dylan did not help at all. for real tho. kid did nothing. LIke absolutely no hepl whatsoever. 
  Description: Loads the scenes n shit
 */
 
-
-
-public class SceneManagement : MonoBehaviour {
+public class SceneManagement : MonoBehaviour
+{
 
     private ArrayList gameScenes;
-    
-    public void GetGameScenes()
-    {
-        
-        Debug.Log(SceneManager.GetSceneByPath("Assets/_Scenes/GameScenes"));
-    }
+    private int scenesLoadedCount = 0;
 
     //loads a scene using a random array of the scenes
-	public void LoadGameScene(string name)
+    public void LoadGameScene()
     {
         Debug.Log("Scene loaded was : " + name);
-        SceneManager.LoadScene(name);
-        GetGameScenes();
+        if (scenesLoadedCount == 1)
+        {
+            SceneManager.LoadScene("TUTORIAL");
+            scenesLoadedCount++;
+        }
+        else
+        {
+            SceneManager.LoadScene(Random.Range(2, SceneManager.sceneCount));
+        }
+        scenesLoadedCount++;
     }
 
     //will only work in production. Wont work in editor
@@ -33,5 +35,4 @@ public class SceneManagement : MonoBehaviour {
     {
         Application.Quit();
     }
-
 }
