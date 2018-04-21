@@ -18,7 +18,7 @@ public class SceneManagement : MonoBehaviour
     public void LoadGameScene()
     {
         Debug.Log("Scene loaded was : " + name);
-        if (scenesLoadedCount == 1)
+        if (scenesLoadedCount == 0)
         {
             SceneManager.LoadScene("TUTORIAL");
             scenesLoadedCount++;
