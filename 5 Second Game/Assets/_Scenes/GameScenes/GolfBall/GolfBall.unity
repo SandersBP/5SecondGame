@@ -493,8 +493,8 @@ GameObject:
   - component: {fileID: 1537890560}
   - component: {fileID: 1537890559}
   - component: {fileID: 1537890558}
-  - component: {fileID: 1537890557}
   - component: {fileID: 1537890556}
+  - component: {fileID: 1537890557}
   m_Layer: 0
   m_Name: GolfBall
   m_TagString: Untagged
@@ -525,10 +525,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1537890555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525c0dab03806944c89a6b0a92d21e31, type: 3}
+  m_Script: {fileID: 11500000, guid: a5293154fd81d714aa7799775f5d5b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 2
 --- !u!23 &1537890558
 MeshRenderer:
   m_ObjectHideFlags: 0

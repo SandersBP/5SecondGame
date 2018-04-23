@@ -13,6 +13,7 @@ public class GolfBallController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
