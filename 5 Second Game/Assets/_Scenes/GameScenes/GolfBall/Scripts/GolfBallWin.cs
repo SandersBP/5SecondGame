@@ -6,6 +6,6 @@ public class GolfBallWin : MonoBehaviour {
 
     public void collide()
     {
-        SceneManagement.Win();
+        //SceneManagement.Win();
     }
 }
