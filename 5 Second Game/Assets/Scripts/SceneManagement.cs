@@ -15,6 +15,10 @@ public class SceneManagement : MonoBehaviour
     private int scenesLoadedCount = 0;
 
     //loads a scene using a random array of the scenes
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void LoadGameScene()
     {
         Debug.Log("Scene loaded was : " + name);
@@ -34,5 +38,12 @@ public class SceneManagement : MonoBehaviour
     public void QuitRequest()
     {
         Application.Quit();
+    }
+
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        LoadGameScene();
+
     }
 }

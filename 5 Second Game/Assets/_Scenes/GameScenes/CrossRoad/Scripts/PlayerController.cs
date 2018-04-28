@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
 
     public bool canMove;
 
+    private SceneManagement scene;
+
     //private SFXManager sfxMan;
 
 
@@ -90,15 +92,19 @@ public class PlayerController : MonoBehaviour
                  anim.SetBool("PlayerMoving", false);
                 
              }
-
-            /*For Diagonal Move
-            if(Mathf.Abs (Input.GetAxisRaw("Horizontal")) > 0.5f && Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f)
-            {
-                currentMoveSpeed = moveSpeed * diagonalMoveModifier;
-            }
-            else
-            {
-                currentMoveSpeed = moveSpeed; 
-            }*/
         }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "NextGame")
+        {
+            scene = FindObjectOfType<SceneManagement>();
+            scene.LoadGameScene();
+        }
+    }
 }
+
+
+    
+
+    

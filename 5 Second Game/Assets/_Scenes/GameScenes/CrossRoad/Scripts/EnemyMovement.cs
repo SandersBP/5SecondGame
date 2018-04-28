@@ -50,7 +50,7 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Hit Detected");
         Destroy(collision.gameObject);
