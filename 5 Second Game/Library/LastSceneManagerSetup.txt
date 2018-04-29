@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/GameScenes/Game2.unity
+- path: Assets/_Scenes/GameScenes/RobTheNerd/RobTheNerd.unity
   isLoaded: 1
   isActive: 1
